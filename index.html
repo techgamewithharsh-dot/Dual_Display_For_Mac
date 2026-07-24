@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Monitor For Mac</title>
+    <meta name="description" content="The ultimate zero-lag screen mirroring app. Turn your iPhone or iPad into a 120 FPS, 4K wireless or USB secondary display for your Mac.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A84FF;
+            --bg-color: #000000;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-main: #FFFFFF;
+            --text-muted: #8E8E93;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Ambient Background Glow */
+        .glow {
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80vw;
+            height: 80vw;
+            background: radial-gradient(circle, rgba(10,132,255,0.2) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .app-icon {
+            width: 140px;
+            height: 140px;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(10, 132, 255, 0.3);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .app-icon:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0 0 20px 0;
+            background: linear-gradient(135deg, #FFFFFF 0%, #A0A0A5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 60px;
+            line-height: 1.5;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 32px;
+            border-radius: 100px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-mac {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 8px 24px rgba(10, 132, 255, 0.4);
+        }
+
+        .btn-mac:hover {
+            background: #0070E0;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(10, 132, 255, 0.5);
+        }
+
+        .btn-ios {
+            background: var(--card-bg);
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-ios:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 100px;
+            text-align: left;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 32px;
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .setup-guide {
+            margin-top: 100px;
+            text-align: left;
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+        }
+
+        .setup-guide h2 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .setup-guide ol {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .setup-guide li span {
+            color: white;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-bottom: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow"></div>
+    
+    <div class="container">
+        <!-- REPLACE 'icon.png' with your actual icon file in the same folder -->
+        <img src="icon.png" alt="Dual Monitor For Mac" class="app-icon" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBBODRGRiIvPjwvc3ZnPg=='">
+        
+        <h1>Dual Monitor For Mac</h1>
+        <p class="subtitle">Turn your iPhone or iPad into an ultra-low latency, 120 FPS secondary display for your Mac. Connect via USB or Wi-Fi instantly.</p>
+        
+        <div class="download-buttons">
+            <!-- REPLACE with your actual GitHub release link -->
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/latest/download/DualMonitorForMac.dmg" class="btn btn-mac">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download for Mac
+            </a>
+            
+            <!-- REPLACE with your App Store link once published -->
+            <a href="https://apps.apple.com" class="btn btn-ios">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                Get on App Store
+            </a>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡️</div>
+                <h3>Zero Latency</h3>
+                <p>Connect via a standard USB cable for unparalleled responsiveness and true 0-lag hardware decoding.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <h3>120 FPS & 4K</h3>
+                <p>Experience ultra-smooth 120 frames per second rendering and crystal clear 4K resolutions on supported devices.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure & Private</h3>
+                <p>All data stays purely on your local network. No external servers, no cloud streaming, 100% private.</p>
+            </div>
+        </div>
+
+        <div class="setup-guide">
+            <h2>How to connect</h2>
+            <ol>
+                <li><span>Download the Mac Host App</span> above and drag it into your Applications folder.</li>
+                <li><span>Download the iOS App</span> from the App Store on your iPhone or iPad.</li>
+                <li><span>Connect your device</span> to your Mac using a USB cable (recommended for true smoothness) or ensure both are on the same Wi-Fi network.</li>
+                <li><span>Open both apps.</span> Select your Mac from the iOS app and you're connected!</li>
+            </ol>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Dual Monitor For Mac. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
