@@ -1,49 +1,71 @@
 <div align="center">
-  <img src="icon.png" width="128" height="128" style="border-radius:24px;" alt="Dual Monitor For Mac">
+  <img src="icon.png" width="150" height="150" style="border-radius:22.5%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" alt="Dual Monitor For Mac">
+  
+  <br><br>
+
   <h1>Dual Monitor For Mac</h1>
-  <p><b>The ultimate zero-lag screen mirroring app. Turn your iPhone or iPad into a 120 FPS, 4K secondary display for your Mac.</b></p>
+
+  <b>The ultimate zero-lag screen mirroring experience. Turn your iPhone or iPad into a breathtaking 120 FPS, 4K secondary display for your Mac.</b>
+
+  <br><br>
+
+  <p>
+    <a href="https://techgamewithharsh-dot.github.io/Dual_Display_For_Mac/"><img src="https://img.shields.io/badge/Website-Live_Now-0A84FF?style=for-the-badge&logo=safari" alt="Website"></a>
+    <a href="https://github.com/techgamewithharsh-dot/Dual_Display_For_Mac/releases/latest"><img src="https://img.shields.io/badge/Download_For_Mac-v1.0.0-238636?style=for-the-badge&logo=apple" alt="Mac App"></a>
+    <img src="https://img.shields.io/badge/App_Store-Coming_Soon-000000?style=for-the-badge&logo=appstore" alt="App Store">
+  </p>
 </div>
-
-<br>
-
-## Overview
-
-Dual Monitor For Mac allows you to extend or mirror your macOS screen to your iOS devices natively with unparalleled performance. By utilizing direct hardware encoding (VideoToolbox) and direct USB tunneling (via `usbmuxd`), it achieves zero-perceivable latency, outperforming standard AirPlay and Wi-Fi solutions.
-
-**[🌐 Visit the Website](https://YOUR_USERNAME.github.io/YOUR_REPO/)**
-
-## Features
-
-- **⚡️ Zero Latency USB Connection:** Bypass spotty Wi-Fi completely. Connect via a standard USB cable for true 0-lag performance.
-- **🎮 120 FPS & 4K Ready:** High-framerate hardware accelerated H.264 decoding allows buttery smooth 120Hz display on ProMotion iPhones/iPads.
-- **🔒 100% Private & Local:** All video and audio streams are routed strictly over local TCP/USB tunnels. No cloud servers, no data harvesting.
-- **🔊 Audio Forwarding:** Routes your Mac's audio directly to your iPhone speakers for a complete multimedia experience.
-
-## Download & Installation
-
-Because the Mac Host app utilizes raw USB tunneling to communicate with the iPhone without latency, it cannot be hosted on the Mac App Store (which requires strict sandboxing that blocks these daemons). 
-
-Therefore, the app is split into two parts:
-
-### 1. Mac Host App (The Server)
-1. Go to the [Releases](https://github.com/YOUR_USERNAME/YOUR_REPO/releases) page of this repository.
-2. Download the latest `DualMonitorForMac.dmg`.
-3. Open the `.dmg` and drag the app into your **Applications** folder.
-
-### 2. iOS Client App (The Display)
-1. Download **Dual Monitor For Mac** from the iOS App Store. *(Link coming soon)*
-
-## Setup Instructions
-
-1. Ensure both apps are installed.
-2. **(Highly Recommended)** Connect your iPhone or iPad to your Mac using a USB Lightning or USB-C cable.
-3. Open the **Dual Monitor For Mac Host** app on your Mac (you will see an icon in your top menu bar).
-4. Open the **Dual Monitor For Mac** app on your iOS device.
-5. Select your Mac from the discovery list.
-6. Enter the 4-digit security PIN displayed on your Mac menu bar into the iOS app.
-7. Your screen will instantly begin mirroring!
 
 ---
 
-### Need Help?
-If you encounter any issues, please open an Issue on this repository or check your Privacy settings on macOS to ensure the app has Screen Recording permissions.
+<br>
+
+## ✨ The Magic Behind The Speed
+
+**Dual Monitor For Mac** isn't just another screen mirroring app. It was engineered from the ground up to bypass the latency of traditional Wi-Fi casting (like AirPlay). 
+
+By utilizing raw **hardware video decoding (VideoToolbox)** combined with a direct **wired USB tunnel (usbmuxd)**, it achieves something extraordinary: **True Zero-Perceivable Latency**. 
+
+> *"It feels like your iPhone screen is natively hardwired to your Mac's graphics card."*
+
+<br>
+
+## 🚀 Key Features
+
+| Feature | Description |
+| :--- | :--- |
+| ⚡️ **Zero Latency USB** | Connect via a standard Lightning or USB-C cable. Bypasses spotty Wi-Fi completely for rock-solid stability. |
+| 🎮 **120 FPS & 4K Ready** | Buttery smooth 120Hz refresh rates on ProMotion displays. Crystal clear resolution scaling. |
+| 🔊 **Native Audio Routing** | Mac audio is forwarded perfectly in sync to your iOS device speakers. |
+| 🔒 **100% Private** | All video and audio streams are localized. No internet required. No cloud servers. No data harvesting. |
+| 🔋 **Battery Efficient** | Utilizes hardware H.264 video decoding to keep your device cool and save battery life. |
+
+<br>
+
+## 📥 How to Install & Connect
+
+Because this app utilizes raw Apple system daemons (`usbmuxd`) to achieve its zero-latency USB speeds, the Mac Host app cannot be distributed on the strict Mac App Store. It is split into two halves:
+
+### 1. The Mac Host (Server)
+1. Go to the [Releases page](https://github.com/techgamewithharsh-dot/Dual_Display_For_Mac/releases).
+2. Download the latest `DualMonitorForMac.dmg`.
+3. Open the `.dmg` and simply drag the app into your **Applications** folder.
+
+### 2. The iOS Client (Display)
+1. Download **Dual Monitor For Mac** from the iOS App Store. *(Link coming soon)*
+
+### 3. Start Mirroring!
+- Connect your iPhone or iPad to your Mac using a USB cable.
+- Open the app on your Mac (look for the icon in your top menu bar).
+- Open the app on your iOS device.
+- Enter the **4-digit security PIN** displayed on your Mac into your iPhone.
+- **Enjoy your new ultra-fast secondary display!**
+
+<br>
+
+---
+
+<div align="center">
+  <p><b>Built with ❤️ for Apple Ecosystem Power Users</b></p>
+  <p><a href="https://techgamewithharsh-dot.github.io/Dual_Display_For_Mac/">Visit the Official Landing Page</a></p>
+</div>
