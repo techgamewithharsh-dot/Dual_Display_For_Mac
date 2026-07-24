@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/icon.png" width="128" height="128" style="border-radius:24px;" alt="Dual Monitor For Mac">
+  <img src="icon.png" width="128" height="128" style="border-radius:24px;" alt="Dual Monitor For Mac">
   <h1>Dual Monitor For Mac</h1>
   <p><b>The ultimate zero-lag screen mirroring app. Turn your iPhone or iPad into a 120 FPS, 4K secondary display for your Mac.</b></p>
 </div>
