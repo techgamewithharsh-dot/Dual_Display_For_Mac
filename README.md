@@ -1,3 +1,4 @@
+[README_Premium.md](https://github.com/user-attachments/files/30361823/README_Premium.md)
 <div align="center">
   <img src="icon.png" width="150" height="150" style="border-radius:22.5%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" alt="Dual Monitor For Mac">
   
@@ -24,7 +25,7 @@
 
 **Dual Monitor For Mac** isn't just another screen mirroring app. It was engineered from the ground up to bypass the latency of traditional Wi-Fi casting (like AirPlay). 
 
-By utilizing raw **hardware video decoding (VideoToolbox)** combined with a direct **wired USB tunnel (usbmuxd)**, it achieves something extraordinary: **True Zero-Perceivable Latency**. 
+By utilizing a **custom proprietary rendering engine** combined with an **advanced direct-wired USB tunnel**, it achieves something extraordinary: **True Zero-Perceivable Latency**. 
 
 > *"It feels like your iPhone screen is natively hardwired to your Mac's graphics card."*
 
@@ -38,13 +39,13 @@ By utilizing raw **hardware video decoding (VideoToolbox)** combined with a dire
 | 🎮 **120 FPS & 4K Ready** | Buttery smooth 120Hz refresh rates on ProMotion displays. Crystal clear resolution scaling. |
 | 🔊 **Native Audio Routing** | Mac audio is forwarded perfectly in sync to your iOS device speakers. |
 | 🔒 **100% Private** | All video and audio streams are localized. No internet required. No cloud servers. No data harvesting. |
-| 🔋 **Battery Efficient** | Utilizes hardware H.264 video decoding to keep your device cool and save battery life. |
+| 🔋 **Battery Efficient** | Utilizes an optimized custom graphics pipeline to keep your device cool and save battery life. |
 
 <br>
 
 ## 📥 How to Install & Connect
 
-Because this app utilizes raw Apple system daemons (`usbmuxd`) to achieve its zero-latency USB speeds, the Mac Host app cannot be distributed on the strict Mac App Store. It is split into two halves:
+Because this app utilizes raw Apple system daemons to achieve its zero-latency USB speeds, the Mac Host app cannot be distributed on the strict Mac App Store. It is split into two halves:
 
 ### 1. The Mac Host (Server)
 1. Go to the [Releases page](https://github.com/techgamewithharsh-dot/Dual_Display_For_Mac/releases).
