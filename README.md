@@ -1,4 +1,3 @@
-[README_Premium.md](https://github.com/user-attachments/files/30361823/README_Premium.md)
 <div align="center">
   <img src="icon.png" width="150" height="150" style="border-radius:22.5%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" alt="Dual Monitor For Mac">
   
